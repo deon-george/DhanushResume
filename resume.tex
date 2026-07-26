@@ -1,152 +1,111 @@
 \RequirePackage[2024/06/01]{latexrelease}
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage[a4paper,margin=0.7in]{geometry}
+% ATS-friendly PDF setup & Unicode mapping
+\pdfgentounicode=1
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Computer Modern font family
+
+\usepackage[a4paper,top=0.45in,bottom=0.45in,left=0.5in,right=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{parskip}
 
-\renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \pagestyle{empty}
 
-% Section formatting
+% Global ATS-compliant list formatting
+\setlist[itemize]{noitemsep, topsep=2pt, parsep=1pt, partopsep=0pt, leftmargin=14pt, label=\raisebox{0.25ex}{\tiny$\bullet$}}
+
+% Section formatting for ATS parsers
 \titleformat{\section}
 {\large\bfseries\uppercase}
 {}
 {0em}
 {}
-[\titlerule]
+[\vspace{-2pt}\titlerule]
 
-\titlespacing*{\section}{0pt}{8pt}{6pt}
+\titlespacing*{\section}{0pt}{6pt}{5pt}
 
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Header
+% Header (ATS Optimized)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{center}
-{\Huge \textbf{DHANUSH M}}
-
-\vspace{4pt}
-
-{\Large \textbf{SOFTWARE DEVELOPER}}
-
-\vspace{8pt}
-
-\href{mailto:dranjith715@gmail.com}{Gmail}
-\quad | \quad
-\href{https://linkedin.com/in/dhanush-ranjith-673bb6278}{LinkedIn}
-\quad | \quad
-\href{https://github.com/dhanush35-lab}{Github}
-\quad | \quad
-+91 8606393247
-
+{\Huge \textbf{DHANUSH M}} \\[3pt]
+{\large \textbf{SOFTWARE DEVELOPER}} \\[6pt]
+\small
+\href{mailto:dranjith715@gmail.com}{dranjith715@gmail.com} \quad|\quad
++91 8606393247 \quad|\quad
+\href{https://linkedin.com/in/dhanush-ranjith-673bb6278}{linkedin.com/in/dhanush-ranjith-673bb6278} \quad|\quad
+\href{https://github.com/dhanush35-lab}{github.com/dhanush35-lab}
 \end{center}
 
+\vspace{-4pt}
 \hrule
-\vspace{10pt}
+\vspace{6pt}
 
-A fourth year B.Tech in Information Technology student, who has hands-on experience in AI/ML, data structures and algorithms, and is eager to explore the world of finance, management and consulting.
+\section*{Professional Summary}
+A fourth year B.Tech in Information Technology student with hands-on experience in AI/ML, Data Structures, and Algorithms. Eager to explore opportunities in Software Development, Machine Learning, Finance, Management, and Consulting.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Professional Experience}
 
-\begin{tabularx}{\textwidth}{Xr}
-\textbf{ML Intern, PACELAB, Kochi} & \textbf{May 2025 -- June 2025}
-\end{tabularx}
-
-Successfully completed a 2-week internship at PACELAB Kochi in Machine Learning.
-\begin{itemize}[leftmargin=18pt]
-\item Developed various machine learning models using classification and regression algorithms.
-\item Worked extensively on data preprocessing and cleaning techniques.
-\end{itemize}
-
-\begin{tabularx}{\textwidth}{Xr}
-\textbf{AI Intern, Soften technologies} & \textbf{June 2026}
-\end{tabularx}
-\begin{itemize}[leftmargin=18pt]
+\noindent\textbf{AI Intern} -- Soften Technologies \hfill \textbf{June 2026}
+\begin{itemize}
 \item Learned and implemented Retrieval-Augmented Generation (RAG) concepts.
 \item Built a RAG-based chatbot for AI/ML research paper analysis.
 \item Developed document ingestion, embedding, retrieval, and response generation pipelines.
 \item Worked with Python, LangChain, Gemini API, ChromaDB, and Flask.
 \end{itemize}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Education}
 
-\begin{tabularx}{\textwidth}{Xr}
-\textbf{BTech in Information Technology} & \textbf{Aug 2023 -- May 2027}
-\end{tabularx}
-
-School of Engineering, Cochin University of Science and Technology, Kochi, Kerala
-
-\begin{itemize}[leftmargin=18pt]
-\item Major in Information Technology
-\item Currently in 3rd Year
-\item CGPA: 7.8
+\noindent\textbf{BTech in Information Technology} \hfill \textbf{Aug 2023 -- May 2027} \\
+\textit{School of Engineering, Cochin University of Science and Technology (CUSAT), Kochi, Kerala}
+\begin{itemize}
+\item Major in Information Technology \quad|\quad Currently in 4th Year \quad|\quad CGPA: 7.8
 \end{itemize}
 
-\begin{tabularx}{\textwidth}{Xr}
-\textbf{Class 12(HSE)} & \textbf{2021-2022}
-\end{tabularx}
-St. Mary's Higher Secondary School, Bharananganam, Kerala
-\begin{itemize}[leftmargin=18pt]
-\item Percentage: 95%
-\end{itemize}
+\vspace{3pt}
+\noindent\textbf{Class 12 (HSE)} -- \textit{St. Mary's Higher Secondary School, Bharananganam, Kerala} \hfill \textbf{2021 -- 2022} \\
+\small Percentage: 95\%
 
-\begin{tabularx}{\textwidth}{Xr}
-\textbf{Class 10(SSLC)} & \textbf{2019-2020}
-\end{tabularx}
-Little Flower High School, Chemmalamattom
-\begin{itemize}[leftmargin=18pt]
-\item Percentage: 93%
-\end{itemize}
+\vspace{3pt}
+\noindent\textbf{Class 10 (SSLC)} -- \textit{Little Flower High School, Chemmalamattom} \hfill \textbf{2019 -- 2020} \\
+\small Percentage: 93\%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Projects}
 
-\textbf{Heart Disease Prediction Model} \hfill \href{https://github.com/dhanush35-lab/heartdiseaseproject}{\faGithub\ GitHub}
-
-\begin{itemize}[leftmargin=18pt]
-\item Built an end-to-end heart disease prediction model by cleaning and preprocessing data from scratch.
-\item Compared multiple algorithms and selected Logistic Regression.
-\item Achieved Recall Score of 0.89.
-\item Developed a Streamlit UI for user interaction and visualization.
-\end{itemize}
-
-\textbf{Machine Learning-Based Phishing Website Detection} \hfill \href{https://github.com/dhanush35-lab/Phishing-Detector}{\faGithub\ GitHub}
-
-\begin{itemize}[leftmargin=18pt]
+\vspace{4pt}
+\noindent\textbf{Machine Learning-Based Phishing Website Detection} \hfill \href{https://github.com/dhanush35-lab/Phishing-Detector}{GitHub Repository}
+\begin{itemize}
 \item Developed a phishing website detection system using React (frontend) and Flask (backend).
-\item Built an XGBoost model to detect phishing websites from a website URL.
-\item Enabled users to check a website by simply entering its URL.
-\item Achieved a 0.97 recall score for phishing website detection.
+\item Built an XGBoost model to detect phishing websites from URL (Achieved 0.97 recall score).
 \item Tech Stack: Python, React, Flask, XGBoost, Scikit-learn, Pandas, NumPy.
 \end{itemize}
 
-\textbf{RAG-Based GitHub Repository Analysis Chatbot} \hfill \href{https://github.com/dhanush35-lab/Repo-IQ}{\faGithub\ GitHub}
-
-\begin{itemize}[leftmargin=18pt]
-\item Developed a RAG-based chatbot to analyze GitHub repositories.
-\item Built a pipeline to process locally cloned repository files and retrieve relevant code using semantic search.
+\vspace{4pt}
+\noindent\textbf{RAG-Based GitHub Repository Analysis Chatbot} \hfill \href{https://github.com/dhanush35-lab/Repo-IQ}{GitHub Repository}
+\begin{itemize}
+\item Developed a RAG-based chatbot to analyze GitHub repositories using semantic search.
 \item Enabled users to ask questions about the repository and receive context-aware answers.
-\item Tech Stack: Python, React, Flask, LangChain, Gemini API, ChromaDB
+\item Tech Stack: Python, React, Flask, LangChain, Gemini API, ChromaDB.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Technical Skills}
 
-\begin{itemize}[leftmargin=18pt]
+\begin{itemize}
 \item \textbf{Programming Languages:} C, C++, Python
 \item \textbf{Databases:} SQL
-\item \textbf{AI/ML:} NumPy, Pandas, Matplotlib, Scikit-learn, Streamlit
+\item \textbf{AI / ML \& Libraries:} NumPy, Pandas, Matplotlib, Scikit-learn, Streamlit
 \item \textbf{Relevant Coursework:} Data Structures and Algorithms, DBMS, OOP, Computer Networks
 \item \textbf{Developer Tools:} VS Code, Docker, GitHub, Google Colab
 \end{itemize}
@@ -154,11 +113,9 @@ Little Flower High School, Chemmalamattom
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Soft Skills}
 
-\begin{itemize}[leftmargin=18pt]
-\item Communication
-\item Networking
-\item Adaptability
-\item Strong Analytical Mindset
+\begin{itemize}
+\item Communication \quad|\quad Networking \quad|\quad Adaptability \quad|\quad Strong Analytical Mindset
 \end{itemize}
 
 \end{document}
+
